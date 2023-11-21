@@ -10,6 +10,7 @@ main :: () {
     log("Old dimensions: %x%", width, height);
 
     status = MagickResizeImage(wand, width / 2, height / 2, .LanczosFilter, 1.0);
+    check_for_error(wand, status);
 
     width = MagickGetImageWidth(wand);
     height = MagickGetImageHeight(wand);

@@ -57,7 +57,7 @@ generate_bindings :: () -> bool {
         // array_add(*strip_prefixes, "Magick");
 
         log_stripped_declarations           = false;
-        generate_compile_time_struct_checks = true;
+        generate_compile_time_struct_checks = false;
         alias_original_enum_names           = false;
         // array_add(*generate_enums_from_macros_with_prefixes,
         //     "HPDF_ENABLE",
@@ -116,12 +116,13 @@ build_gm :: () -> bool {
 		"./configure",
         tprint("--prefix=%", absolute_install_dir),
         // Let’s disable a bunch of crap we don’t need:
-        "--with-ttf=no",
         "--with-gs=no",
-        "--with-x=no",
-        "--with-png=yes",
-        "--with-xml=no",
+        "--with-jxl=no",
         "--with-magick-plus-plus=no",
+        "--with-png=yes",
+        "--with-ttf=yes", // For SVG… sigh…
+        "--with-x=no",
+        "--with-xml=yes", // For SVG… sigh…
 	);
 
     #if OS == .MACOS {

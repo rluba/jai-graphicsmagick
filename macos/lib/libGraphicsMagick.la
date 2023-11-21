@@ -17,7 +17,7 @@ old_library='libGraphicsMagick.a'
 inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/usr/local/homebrew/lib -lwebp -lwebpmux -lsharpyuv -lheif -lde265 -llcms2 -ltiff -ljpeg -ljxl -ljxl_threads -lhwy -lbrotlidec -lbrotlienc -lstdc++ -lpng16 -llzma -lbz2 -lz -lzstd -lm -lpthread'
+dependency_libs=' -L/usr/local/homebrew/lib -L/opt/homebrew/opt/freetype/lib -lwebp -lwebpmux -lsharpyuv -L/opt/homebrew/Cellar/libheif/1.15.1/lib -lheif -llcms2 -ltiff -lfreetype -ljpeg -lpng16 -llzma -lbz2 -lxml2 -lz -lzstd -lm -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
