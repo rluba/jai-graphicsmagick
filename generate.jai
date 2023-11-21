@@ -101,11 +101,16 @@ build_gm :: () -> bool {
 		"./configure",
         tprint("--prefix=%", absolute_install_dir),
         // Let’s disable a bunch of crap we don’t need:
+        "--with-dps=no",
+        "--with-gdi32=no",
         "--with-gs=no",
+        "--with-jbig=no",
         "--with-jxl=no",
         "--with-magick-plus-plus=no",
         "--with-png=yes",
+        "--with-trio=no",
         "--with-ttf=yes", // For SVG… sigh…
+        "--with-wmf=no",
         "--with-x=no",
         "--with-xml=yes", // For SVG… sigh…
 	);

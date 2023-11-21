@@ -15,4 +15,7 @@ libxml2     :: #system_library "libxml2";
 libfreetype :: #system_library "libfreetype";
 zlib        :: #system_library "libz";
 zstd        :: #system_library "libzstd";
+#if OS == .LINUX {
+    libomp      :: #system_library "libomp";
+}
 

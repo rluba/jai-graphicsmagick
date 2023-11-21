@@ -17,7 +17,7 @@ old_library='libGraphicsMagickWand.a'
 inherited_linker_flags=' -fopenmp -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' /opt/app/linux/lib/libGraphicsMagick.la -ljbig -lwebp -lwebpmux -lheif -lde265 -llcms2 -ltiff -ljpeg -lpng16 -llzma -lbz2 -lxml2 -lz -lzstd -lpthread -lm'
+dependency_libs=' /opt/app/linux/lib/libGraphicsMagick.la -lwebp -lwebpmux -lheif -llcms2 -ltiff -lfreetype -ljpeg -lpng16 -llzma -lbz2 -lxml2 -lz -lzstd -lpthread -lm'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
