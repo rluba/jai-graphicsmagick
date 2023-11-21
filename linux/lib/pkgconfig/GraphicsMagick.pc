@@ -1,0 +1,12 @@
+prefix=/opt/app/linux
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/GraphicsMagick
+
+
+Name: GraphicsMagick
+Version: 1.3.42
+Description: GraphicsMagick image processing library
+Libs: -L${libdir} -lGraphicsMagick
+Libs.private:  -ljbig -lwebp -lwebpmux -lheif -lde265 -llcms2 -ltiff -ljpeg -lpng16 -llzma -lbz2 -lxml2 -lz -lzstd -lm -lpthread
+Cflags: -I${includedir} 

@@ -85,21 +85,6 @@ generate_bindings :: () -> bool {
     compiler_report(tprint("Unsupported platform: %", OS));
 }
 
-// build_gm :: () -> bool {
-// 	install_dir := PLATFORM_NAME;
-//     success := make_directory_if_it_does_not_exist(install_dir);
-//     if !success {
-//         log_error("Could not create directory \"%\"\n", install_dir);
-// 		return false;
-//     }
-
-//     success = build_libharu("dynamic library", .[], install_dir);
-//     if !success return false;
-//     success = build_libharu("static library", .["-DBUILD_SHARED_LIBS=OFF"], install_dir);
-//     if !success return false;
-//     return true;
-// }
-
 build_gm :: () -> bool {
 	install_dir := PLATFORM_NAME;
     success := make_directory_if_it_does_not_exist(install_dir);
@@ -136,7 +121,6 @@ build_gm :: () -> bool {
     }
 
     log("Configuring GraphicsMagick... \"%\"", absolute_install_dir);
-    // run_or_exit("autoconf",        working_directory = GM_PATH);
     run_or_exit(..config_command,  working_directory = GM_PATH);
     log("Done configuring GraphicsMagick");
 
