@@ -1,0 +1,8 @@
+.build/
+examples/example
+GraphicsMagick-*/
+linux/bin/
+linux/share/
+macos/bin/
+macos/share/
+*.dSYM
