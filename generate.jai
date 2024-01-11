@@ -120,8 +120,8 @@ build_gm :: () -> bool {
         array_add(*config_command,
             tprint("LDFLAGS=-L%/lib", MACOS_X64_HOMEBREW_PATH),
             tprint("CPPFLAGS=-I%/include", MACOS_X64_HOMEBREW_PATH),
-            tprint("CFLAGS=-I%/include -mmacosx-version-min=%.%", MACOS_X64_HOMEBREW_PATH, minimum_macos_version.major, minimum_macos_version.minor),
-            tprint("CXXFLAGS=-I%/include -mmacosx-version-min=%.%", MACOS_X64_HOMEBREW_PATH, minimum_macos_version.major, minimum_macos_version.minor),
+            tprint("CFLAGS=-I%/include -mmacosx-version-min=%.%", MACOS_X64_HOMEBREW_PATH, minimum_os_version.major, minimum_os_version.minor),
+            tprint("CXXFLAGS=-I%/include -mmacosx-version-min=%.%", MACOS_X64_HOMEBREW_PATH, minimum_os_version.major, minimum_os_version.minor),
         );
     }
 
