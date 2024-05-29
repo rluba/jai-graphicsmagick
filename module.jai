@@ -3,19 +3,19 @@
 #import "POSIX";
 
 // Additional libraries needed by GM (depending on what you had installed when you built GM)
-libbz2      :: #system_library "libbz2";
-libheif     :: #system_library "libheif";
-libjpeg     :: #system_library "libjpeg";
-liblcms2    :: #system_library "liblcms2";
-libpng      :: #system_library "libpng";
-libtiff     :: #system_library "libtiff";
-libwebp     :: #system_library "libwebp";
-libwebpmux  :: #system_library "libwebpmux";
-libxml2     :: #system_library "libxml2";
-libfreetype :: #system_library "libfreetype";
-zlib        :: #system_library "libz";
-zstd        :: #system_library "libzstd";
+libbz2      :: #library,system,link_always "libbz2";
+libheif     :: #library,system,link_always "libheif";
+libjpeg     :: #library,system,link_always "libjpeg";
+liblcms2    :: #library,system,link_always "liblcms2";
+libpng      :: #library,system,link_always "libpng";
+libtiff     :: #library,system,link_always "libtiff";
+libwebp     :: #library,system,link_always "libwebp";
+libwebpmux  :: #library,system,link_always "libwebpmux";
+libxml2     :: #library,system,link_always "libxml2";
+libfreetype :: #library,system,link_always "libfreetype";
+zlib        :: #library,system,link_always "libz";
+zstd        :: #library,system,link_always "libzstd";
 #if OS == .LINUX {
-    libomp      :: #system_library "libomp";
+    libomp      :: #library,system,link_always "libomp";
 }
 
