@@ -16,6 +16,7 @@ libfreetype :: #library,system,link_always "libfreetype";
 zlib        :: #library,system,link_always "libz";
 zstd        :: #library,system,link_always "libzstd";
 #if OS == .LINUX {
-    libomp      :: #library,system,link_always "libomp";
+    libomp  :: #library,system,link_always "libomp5";
+    libm    :: #library,system,link_always "libm";
 }
 
